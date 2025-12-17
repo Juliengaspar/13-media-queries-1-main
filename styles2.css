@@ -1,0 +1,36 @@
+/*mobile first = progresive enhanacement = la bonne methode*/
+html {
+    padding: 10px 50px;
+}
+body {
+    background: #F1EFE2;
+    font-size: 1.4em;
+    line-height: 1.4;
+    font-family: helvetica, arial, sans-serif;
+}
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #567;
+}
+
+p.toto{
+    padding: 10px 20px;
+    background: maroon;
+    color: #dd0;
+    /*width: 100%;/*mnt mon padding sort de la page   X*/
+    /*pour que le contenus reprend tous la page du viewport on dois enlever , annuler remettres la valeur par default */
+    width: auto;/*V*/
+}
+
+
+@media screen and (min-width: 640px){/*plus grand que 640 px */
+    p.toto{
+        background: hotpink;
+        color: #fff;
+
+        width: 80%;
+        margin : 1em auto;
+        max-width: 30em;
+    }
+}

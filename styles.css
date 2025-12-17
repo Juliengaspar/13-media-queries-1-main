@@ -1,0 +1,78 @@
+/*gracefull degredation -pas mobile first déconseillé*/
+/* ----------------------------- */
+/*   Objectif Media Queries      */
+/* ----------------------------- */
+/*
+
+Modifier le design selon la taille du média
+
+Lorsque la taille de la fenêtre est inférieure à 640 pixels, la couleur de l'arrière-plan des paragraphes doit devenir "maroon", la couleur des textes doit devenir #dd0.
+
+*/
+
+html {
+	padding: 10px 50px;
+}
+body {
+	background: #F1EFE2;
+	font-size: 1.4em;
+	line-height: 1.4;
+	font-family: helvetica, arial, sans-serif;
+}
+h1 {
+	margin-top: 0;
+	margin-bottom: 20px;
+	color: #567;
+}
+p.toto {
+	padding: 10px 20px;
+	background: hotpink;
+	color: #fff;
+
+	width: 80%;
+	margin : 1em auto;
+	max-width: 30em;
+
+}
+/*
+@media screen and (width<640px){
+	p{
+		background: maroon;
+		color: #dd0;
+	}
+}
+*/
+/*ou*/
+/*media queri "taille de la fenêtre inférieur ou egale à 640px*/
+/*width<640px*/
+/*
+@media screen and (max-width: 640px){
+	p.toto{
+		background: maroon;
+		color: #dd0;
+		/*width: 100%;/*mnt mon padding sort de la page   X*/
+		/*padding: 2em;/*mnt mon padding sort de la page*/
+		/*pour que le contenus reprend tous la page du viewport on dois enlever , annuler remettres la valeur par default */
+		/*width: auto;/*V
+	}
+}
+
+
+/*le css de bas s'apllique
+ici les P.toto ont une couleur blanche (L18)
+Ecrant entre 600 et 800 px on degrade
+la valeur blue de color (L49) écrase la valeur white(L18)
+==>tester pa rex avec700px
+la couleur blanche ne s'affiche plus
+
+*/
+@media (600px <= width >= 800px){
+	p.toto{
+		background: maroon;
+		color: #dd0;
+		/*width: 100%;/*mnt mon padding sort de la page   X*/
+		padding: 2em;/*mnt mon padding sort de la page*/
+		/*pour que le contenus reprend tous la page du viewport on dois enlever , annuler remettres la valeur par default */
+		width: auto;/*V*/
+	}
+}
