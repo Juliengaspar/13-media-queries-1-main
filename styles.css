@@ -66,7 +66,7 @@ la valeur blue de color (L49) écrase la valeur white(L18)
 la couleur blanche ne s'affiche plus
 
 */
-@media (600px <= width >= 800px){
+@media (max-width: 640px){
 	p.toto{
 		background: maroon;
 		color: #dd0;
